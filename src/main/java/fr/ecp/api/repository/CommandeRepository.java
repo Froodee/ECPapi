@@ -1,0 +1,9 @@
+package fr.ecp.api.repository;
+
+import fr.ecp.api.entity.Commande;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface CommandeRepository extends JpaRepository<Commande, Integer> {
+    List<Commande> findByIdUserId(Integer userId);
+}
