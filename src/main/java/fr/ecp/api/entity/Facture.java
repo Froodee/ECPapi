@@ -21,6 +21,9 @@ public class Facture {
     @Column(name = "date_fact")
     private LocalDate dateFact;
 
+    @Column(name = "montant", precision = 10, scale = 2)
+    private String montant = "0.00";
+
     @OneToOne
     @JoinColumn(name = "num_cde_id")
     private Commande commande;

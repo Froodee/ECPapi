@@ -17,6 +17,9 @@ public class Avis {
     @Column(name = "commentaire", length = 500)
     private String commentaire;
 
+    @Column(name = "note")
+    private Short note = 5;
+
     @ManyToOne
     @JoinColumn(name = "ref_pds_id")
     private Produits refPds;
